@@ -1,5 +1,13 @@
 # Original-Media-Organizer
 
+## How to upload your code?
+Click on "Branch: master". Type the name of the branch you want to create (yourname-#) <br>
+Branch name example: david-1 <br>
+On your branch, click "Upload files". <br>
+Drop the files you want to upload (.java or .jsp or .css) <br>
+Click Commit changes <br>
+
+## Installation/Set up
 Download Java (JDK 10 or 11) <br>
 
 Download Tomcat Guide: https://csns.calstatela.edu/wiki/content/cysun/course_materials/eclipse <br>
@@ -20,5 +28,5 @@ CSS files should go into WebContent <br>
 This is what the Eclipse directory should look similar to: <br>
 ![Directory](https://github.com/dtang9/Original-Media-Organizer/blob/master/directory.JPG) <br>
 
-Progress: <br>
+## Progress: <br>
 ![Directory](https://github.com/dtang9/Original-Media-Organizer/blob/master/display%20page.JPG) <br>
