@@ -17,7 +17,7 @@ All servlet (.java) files should go into src <br>
 All (.jsp) files should go into WEB-INF <br>
 CSS files should go into WebContent <br>
 
-This is what the Eclipse directory should look similar to:
+This is what the Eclipse directory should look similar to: <br>
 ![Directory](https://github.com/dtang9/Original-Media-Organizer/blob/master/directory.JPG) <br>
 
 Progress: <br>
