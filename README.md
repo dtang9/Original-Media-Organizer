@@ -18,3 +18,4 @@ All (.jsp) files should go into WEB-INF <br>
 CSS files should go into WebContent <br>
 
 
+![Directory](C:\Users\David\Desktop\directory)
