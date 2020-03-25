@@ -1,41 +1,49 @@
 package omo;
 
 public class MediaFile {
-	private Integer postId;
+	private int post_id;
 	private String name;
-	private String type;
+	private String media_type;
 	private String url;
 	
-	public MediaFile(Integer postId, String name, String type, String url) {
-		this.postId = postId;
-		this.name = name;
-		this.type = type;
-		this.url = url;
+	public MediaFile(Integer post_id, String name, String media_type, String url) {
+		this.setPost_id(post_id);
+		this.setName(name);
+		this.setMedia_type(media_type);
+		this.setUrl(url);
 		
 	}
-	public Integer getPostId() {
-		return postId;
+
+	public int getPost_id() {
+		return post_id;
 	}
 
-	public void setPostId(Integer postId) {
-		this.postId = postId;
+	public void setPost_id(int post_id) {
+		this.post_id = post_id;
 	}
+
 	public String getName() {
 		return name;
 	}
+
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getType() {
-		return type;
+
+	public String getMedia_type() {
+		return media_type;
 	}
-	public void setType(String type) {
-		this.type = type;
+
+	public void setMedia_type(String media_type) {
+		this.media_type = media_type;
 	}
+
 	public String getUrl() {
 		return url;
 	}
+
 	public void setUrl(String url) {
 		this.url = url;
 	}
+	
 }
