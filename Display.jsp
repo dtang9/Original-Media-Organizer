@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 
@@ -25,29 +26,23 @@
         <div class="col-8">
             <div class="jumbotron">
                 <h2 class="text-center">Feed/Media</h2>
+                <c:forEach items="${posts}" var="post">
                 <div class="card">
                     <div class="card-header">
-                        Bob's Post
+                        ${post.username}
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a class="video" href="https://www.youtube.com/watch?v=beOxJm1_tbk">Video:
-                            https://www.youtube.com/watch?v=beOxJm1_tbk</a>
+                        <h5 class="card-title">${post.title}</h5> 
+                        <h6 class="card-subtitle mb-2 text-muted">${post.date}</h6>
+                        <p class="card-text">${post.text}</p>
+                        <c:forEach items="${post.mediafiles}" var="mediafile">
+                        ${mediafile.media_type}:
+                        <a class="${mediafile.name}" href="${mediafile.url}">
+                            ${mediafile.url}</a>
+                            </c:forEach>
                     </div>
                 </div>
-                <div class="card">
-                    <div class="card-header">
-                        John's Post
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a class="image"
-                            href="https://upload.wikimedia.org/wikipedia/commons/e/eb/Ash_Tree_-_geograph.org.uk_-_590710.jpg">Image:
-                            https://upload.wikimedia.org/wikipedia/commons/e/eb/Ash_Tree_-_geograph.org.uk_-_590710.jpg</a>
-                    </div>
-                </div>
+                </c:forEach>
             </div>
         </div>
         <div class="col">
@@ -55,6 +50,7 @@
                 <div class="card-header">
                     Media Filters
                 </div>
+                <form action="Filter" method="post">
                 <div class="card-body">
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="exampleRadios" id="textfilter"
@@ -84,10 +80,11 @@
                             Audio
                         </label>
                     </div>
+                        <input name="filter" type="submit" value="Filter">
                 </div>
+                </form>
             </div>
         </div>
     </div>
 </body>
-
 </html>
