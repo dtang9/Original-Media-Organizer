@@ -29,4 +29,4 @@ This is what the Eclipse directory should look similar to: <br>
 ![Directory](https://github.com/dtang9/Original-Media-Organizer/blob/master/directory.JPG) <br>
 
 ## Progress: <br>
-![Directory](https://github.com/dtang9/Original-Media-Organizer/blob/master/display%20page.JPG) <br>
+![Progress](https://github.com/dtang9/Original-Media-Organizer/blob/master/display%20page.pngG) <br>
