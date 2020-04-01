@@ -24,15 +24,14 @@
         <div class="col-8">
             <div class="jumbotron">
                 <h2 class="text-center">Feed/Media</h2>
-                <c:forEach items="${images}" var="image">
+                <c:forEach items="${texts}" var="text">
                 <div class="card">
                     <div class="card-header">
-                        ${image.media_file}
+                        ${text.username}
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title">${image.name}</h5> 
-                        <p class="card-text"><a class="${image.name}" href="${image.url}">
-                            ${image.url}</a></p>
+                        <h5 class="card-title">${text.title}</h5> 
+                        <p class="card-text">${text.message}</p>
                     </div>
                 </div>
                 </c:forEach>
@@ -44,7 +43,7 @@
                     Media Filter
                 </div>
                 <div class="card-body">
-                    Image
+                    Text
                 </div>
             </div>
         </div>
