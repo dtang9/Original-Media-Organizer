@@ -29,4 +29,9 @@ This is what the Eclipse directory should look similar to: <br>
 ![Directory](https://github.com/dtang9/Original-Media-Organizer/blob/master/directory.JPG) <br>
 
 ## Progress: <br>
-![Progress](https://github.com/dtang9/Original-Media-Organizer/blob/master/display%20page.png) <br>
+![Display](https://github.com/dtang9/Original-Media-Organizer/blob/master/display%20page.png) <br>
+
+![TextFilter] (https://github.com/dtang9/Original-Media-Organizer/blob/david-1-1/text%20filter.png) <br>
+![ImageFilter] (https://github.com/dtang9/Original-Media-Organizer/blob/david-1-1/image%20filter.png) <br>
+![VideoFilter] (https://github.com/dtang9/Original-Media-Organizer/blob/david-1-1/video%20filter.png) <br>
+![AudioFilter] (https://github.com/dtang9/Original-Media-Organizer/blob/david-1-1/audio%20filter.png) <br>
