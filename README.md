@@ -31,7 +31,7 @@ This is what the Eclipse directory should look similar to: <br>
 ## Progress: <br>
 ![Display](https://github.com/dtang9/Original-Media-Organizer/blob/master/display%20page.png) <br>
 
-![TextFilter] (https://github.com/dtang9/Original-Media-Organizer/blob/david-1-1/text%20filter.png) <br>
-![ImageFilter] (https://github.com/dtang9/Original-Media-Organizer/blob/david-1-1/image%20filter.png) <br>
-![VideoFilter] (https://github.com/dtang9/Original-Media-Organizer/blob/david-1-1/video%20filter.png) <br>
-![AudioFilter] (https://github.com/dtang9/Original-Media-Organizer/blob/david-1-1/audio%20filter.png) <br>
+![TextFilter] (https://github.com/dtang9/Original-Media-Organizer/blob/master/text%20filter.png) <br>
+![ImageFilter] (https://github.com/dtang9/Original-Media-Organizer/blob/master/image%20filter.png) <br>
+![VideoFilter] (https://github.com/dtang9/Original-Media-Organizer/blob/master/video%20filter.png) <br>
+![AudioFilter] (https://github.com/dtang9/Original-Media-Organizer/blob/master/audio%20filter.png) <br>
