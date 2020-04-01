@@ -34,9 +34,9 @@
                     <div class="card-body">
                         <h5 class="card-title">${post.title}</h5> 
                         <h6 class="card-subtitle mb-2 text-muted">${post.date}</h6>
-                        <p class="card-text">${post.text}</p>
+                        <p class="card-text">${post.message}</p>
                         <c:forEach items="${post.mediafiles}" var="mediafile">
-                        ${mediafile.media_type}:
+                        ${mediafile.media_file}:
                         <a class="${mediafile.name}" href="${mediafile.url}">
                             ${mediafile.url}</a>
                             </c:forEach>
@@ -53,29 +53,29 @@
                 <form action="Filter" method="post">
                 <div class="card-body">
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="exampleRadios" id="textfilter"
-                            value="option1" checked>
+                        <input class="form-check-input" type="radio" name="text" id="textfilter"
+                            value="text">
                         <label class="form-check-label" for="exampleRadios1">
                             Text
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="exampleRadios" id="imagefilter"
-                            value="option2">
+                        <input class="form-check-input" type="radio" name="image" id="imagefilter"
+                            value="image">
                         <label class="form-check-label" for="exampleRadios2">
-                            Images
+                            Image
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="exampleRadios" id="videofilter"
-                            value="option1" checked>
+                        <input class="form-check-input" type="radio" name="video" id="videofilter"
+                            value="video">
                         <label class="form-check-label" for="exampleRadios1">
-                            Videos
+                            Video
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="exampleRadios" id="audiofilter"
-                            value="option2">
+                        <input class="form-check-input" type="radio" name="audio" id="audiofilter"
+                            value="audio">
                         <label class="form-check-label" for="exampleRadios2">
                             Audio
                         </label>

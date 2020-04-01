@@ -8,15 +8,15 @@ public class Post {
 	private int id;
 	private String username;
 	private String title;
-	private String text;
+	private String message;
 	private Date date;
 	List<MediaFile> mediafiles = new ArrayList<MediaFile>();
 
-	public Post(int id, String username, String title, String text, Date date) {
+	public Post(int id, String username, String title, String message, Date date) {
 		this.id = id;
 		this.username = username;
 		this.title = title;
-		this.text = text;
+		this.message = message;
 		this.date = date;
 	}
 
@@ -36,12 +36,12 @@ public class Post {
 		this.username = username;
 	}
 
-	public String getText() {
-		return text;
+	public String getMessage() {
+		return message;
 	}
 
-	public void setText(String text) {
-		this.text = text;
+	public void setMessage(String message) {
+		this.message = message;
 	}
 
 	public Date getDate() {

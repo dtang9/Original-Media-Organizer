@@ -43,8 +43,8 @@ public class Display extends HttpServlet {
 		Connection c = null;
 		try {
 			String url = "jdbc:mysql://cs3.calstatela.edu/cs3337stu01";
-			String username = 
-			String password = 
+			String username = "";
+			String password = "";
 			
 			c = DriverManager.getConnection(url, username, password);
 			String sql = "select * from posts";
@@ -52,13 +52,13 @@ public class Display extends HttpServlet {
 			ResultSet rs = pstmt.executeQuery();
 			
 			while (rs.next()) {
-				Post post = new Post(Integer.parseInt(rs.getString("id")), rs.getString("username"), rs.getString("title"), rs.getString("text"), rs.getDate("date"));
+				Post post = new Post(Integer.parseInt(rs.getString("id")), rs.getString("username"), rs.getString("title"), rs.getString("message"), rs.getDate("date"));
 				String sql2 = "select * from mediafiles where post_id = " + post.getId();
 				PreparedStatement pstmt2 = c.prepareStatement(sql2);
 				ResultSet rs2 = pstmt2.executeQuery();
 				while (rs2.next()) {
 					post.addMediafile(new MediaFile(Integer.parseInt(rs2.getString("post_id")), rs2.getString("name"),
-							rs2.getString("media_type"), rs2.getString("url")));
+							rs2.getString("media_file"), rs2.getString("url")));
 					posts.add(post);
 				}
 			}
