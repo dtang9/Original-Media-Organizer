@@ -42,6 +42,8 @@ public class Filter extends HttpServlet {
 			String image = request.getParameter("image");
 			String video = request.getParameter("video");
 			String audio = request.getParameter("audio");
+			String hashtag = request.getParameter("hashtag");
+			String date = request.getParameter("date");
 			
 			if (text != null) {
 				List<Text> texts = new ArrayList<Text>();
@@ -99,6 +101,33 @@ public class Filter extends HttpServlet {
 				request.setAttribute("audios", audios);
 				// Redirect user to the corresponding filtered page
 				request.getRequestDispatcher("/WEB-INF/FilteredAudios.jsp").forward(request, response);
+			}
+			else if (hashtag != null) {
+				List<Hashtag> hashtags = new ArrayList<Hashtag>();
+				sql = "select * from hashtags";
+				pstmt = c.prepareStatement(sql);
+				ResultSet rs = pstmt.executeQuery();
+				while (rs.next()) {
+					hashtags.add(new Hashtag(Integer.parseInt(rs.getString("post_id")), rs.getString("word")));
+				}
+				c.close();
+				request.setAttribute("hashtags", hashtags);
+				request.getRequestDispatcher("/WEB-INF/FilteredHashtags.jsp").forward(request, response);
+			}
+			if (date != null) {
+				List<String> dates = new ArrayList<String>();
+				// Get dates of posts
+				sql = "select date from posts";
+				pstmt = c.prepareStatement(sql);
+				ResultSet rs = pstmt.executeQuery();
+				while (rs.next()) {
+					// Store the date
+					dates.add(rs.getString("date"));
+				}
+				c.close();
+				request.setAttribute("dates", dates);
+				// Redirect user to the corresponding filtered page
+				request.getRequestDispatcher("/WEB-INF/FilteredDates.jsp").forward(request, response);
 			}
 			c.close();
 		}

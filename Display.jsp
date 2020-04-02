@@ -39,7 +39,9 @@
                         ${mediafile.media_file}:
                         <a class="${mediafile.name}" href="${mediafile.url}">
                             ${mediafile.url}</a>
-                            </c:forEach>
+                           </c:forEach><br>
+                        <c:forEach items="${post.hashtags}" var="hashtag">
+                            ${hashtag.word} </c:forEach>
                     </div>
                 </div>
                 </c:forEach>
@@ -78,6 +80,20 @@
                             value="audio">
                         <label class="form-check-label" for="exampleRadios2">
                             Audio
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="hashtag" id="hashtagfilter"
+                            value="hashtag">
+                        <label class="form-check-label" for="exampleRadios1">
+                            Hashtag
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="date" id="datefilter"
+                            value="date">
+                        <label class="form-check-label" for="exampleRadios1">
+                            Date
                         </label>
                     </div>
                         <input name="filter" type="submit" value="Filter">

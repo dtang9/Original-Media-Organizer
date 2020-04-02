@@ -17,6 +17,13 @@ create table mediafiles (
     url varchar(3000)
 );
 
+drop table if exists hashtags;
+
+create table hashtags (
+    post_id integer,
+    word varchar(300)
+  );
+
 insert into posts (username, title, message, date)
     values ('Bob', 'How are croissants made?', 'Today, I found a very nice video on how croissants are made.', '2020-01-23 17:10:00');
 insert into posts (username, title, message, date)
@@ -34,3 +41,12 @@ insert into mediafiles (post_id, name, media_file, url)
 	values (3, 'starwars', 'audio', 'https://www.youtube.com/watch?v=_D0ZQPqeJkk');
 insert into mediafiles (post_id, name, media_file, url)
 	values (4, 'mountain', 'image', 'https://images.pexels.com/photos/618833/pexels-photo-618833.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
+
+insert into hashtags (post_id, word)
+  values (1, '#baking');
+insert into hashtags (post_id, word)
+  values (2, '#plants');
+insert into hashtags (post_id, word)
+  values (3, '#music');
+insert into hashtags (post_id, word)
+  values (4, '#nature');
