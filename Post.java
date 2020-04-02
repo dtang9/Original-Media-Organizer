@@ -11,6 +11,7 @@ public class Post {
 	private String message;
 	private Date date;
 	List<MediaFile> mediafiles = new ArrayList<MediaFile>();
+	List<Hashtag> hashtags = new ArrayList<Hashtag>();
 
 	public Post(int id, String username, String title, String message, Date date) {
 		this.id = id;
@@ -66,5 +67,13 @@ public class Post {
 	
 	public void addMediafile(MediaFile file) {
 		mediafiles.add(file);
+	}
+
+	public List<Hashtag> getHashtags() {
+		return hashtags;
+	}
+
+	public void addHashtag(Hashtag hashtag) {
+		hashtags.add(hashtag);
 	}
 }

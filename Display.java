@@ -30,7 +30,7 @@ public class Display extends HttpServlet {
 
         try
         {
-            Class.forName( "com.mysql.jdbc.Driver" );
+            Class.forName("com.mysql.cj.jdbc.Driver");
         }
         catch( ClassNotFoundException e )
         {
@@ -56,11 +56,20 @@ public class Display extends HttpServlet {
 				String sql2 = "select * from mediafiles where post_id = " + post.getId();
 				PreparedStatement pstmt2 = c.prepareStatement(sql2);
 				ResultSet rs2 = pstmt2.executeQuery();
+				// Add mediafiles to post
 				while (rs2.next()) {
 					post.addMediafile(new MediaFile(Integer.parseInt(rs2.getString("post_id")), rs2.getString("name"),
 							rs2.getString("media_file"), rs2.getString("url")));
-					posts.add(post);
+					// posts.add(post);
 				}
+				String sql3 = "select * from hashtags where post_id = " + post.getId();
+				PreparedStatement pstmt3 = c.prepareStatement(sql3);
+				ResultSet rs3 = pstmt3.executeQuery();
+				// Add hashtags to post
+				while (rs3.next()) {
+					post.addHashtag(new Hashtag(Integer.parseInt(rs3.getString("post_id")), rs3.getString("word")));
+				}
+				posts.add(post);
 			}
 			c.close();
 		}
