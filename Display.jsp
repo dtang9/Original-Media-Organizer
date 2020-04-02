@@ -18,8 +18,8 @@
     <div class="row justify-content-md-center">
         <div class="col">
             <ul class="list-group">
-                <a href="#" class="list-group-item list-group-item-action">Home</a>
-                <a href="#" class="list-group-item list-group-item-action">Edit Media</a>
+                <a href="Display" class="list-group-item list-group-item-action">Home</a>
+                <a href="MakePost" class="list-group-item list-group-item-action">Post</a>
                 <a href="#" class="list-group-item list-group-item-action">Following</a>
             </ul>
         </div>
@@ -41,8 +41,11 @@
                             ${mediafile.url}</a>
                            </c:forEach><br>
                         <c:forEach items="${post.hashtags}" var="hashtag">
-                            ${hashtag.word} </c:forEach>
+                            ${hashtag.word} </c:forEach>                            
                     </div>
+                    <div class="card-footer">
+                        <a href="DeletePost?${post.id}" class="btn btn-danger">Delete</a>
+  					</div>
                 </div>
                 </c:forEach>
             </div>
