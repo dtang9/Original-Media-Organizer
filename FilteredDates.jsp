@@ -42,7 +42,7 @@
                     Media Filter
                 </div>
                 <div class="card-body">
-                    Text
+                    Date
                 </div>
             </div>
         </div>

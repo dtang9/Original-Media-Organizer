@@ -27,7 +27,7 @@
                 <c:forEach items="${hashtags}" var="hashtag">
                 <div class="card">
                     <div class="card-header">
-                        Hashtags
+                        Hashtag
                     </div>
                     <div class="card-body">
                     ${hashtag.word}
