@@ -26,7 +26,7 @@ All (.jsp) files should go into WEB-INF <br>
 CSS files should go into WebContent <br>
 
 This is what the Eclipse directory should look similar to: <br>
-![Directory](https://github.com/dtang9/Original-Media-Organizer/blob/master/directory.JPG) <br>
+![Directory](https://github.com/dtang9/Original-Media-Organizer/blob/master/Progress/directory.JPG) <br>
 
 ## Progress: <br>
 ![Display](https://github.com/dtang9/Original-Media-Organizer/blob/master/Progress/display%20page.png) <br>
