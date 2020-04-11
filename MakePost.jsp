@@ -25,24 +25,24 @@
                 <form action="MakePost" method="post">
   <div class="form-group">
     <label for="user">User's name</label>
-    <input type="text" class="form-control" name="user" placeholder="user">
+    <input type="text" class="form-control" name="user">
   </div>
     <div class="form-group">
-    <label for="title">Title</label>
-    <input type="text" class="form-control" name="title" placeholder="Title">
+    <label for="title">Post title</label>
+    <input type="text" class="form-control" name="title">
   </div>
   <div class="form-group">
     <label for="message">Message</label>
-    <input type="text" class="form-control" name="message" placeholder="Message">
+    <textarea class="form-control" id="message" name="message" rows="3"></textarea>
   </div>
   <div class="form-group">
     <label for="message">Hashtag</label>
     <input type="text" class="form-control" name="word" placeholder="#word">
   </div>
-  <h1>Create/upload Media</h1>
+  <h3 class="text-center">Create/Upload Media</h3>
   <div class="form-group">
     <label for="name">Name of media</label>
-    <input type="text" class="form-control" name="medianame" placeholder="Media name">
+    <input type="text" class="form-control" name="medianame">
   </div>
     <div class="form-group">
     <label for="mediafile">Media File</label>
