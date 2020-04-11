@@ -6,16 +6,16 @@ import java.util.List;
 
 public class Post {
 	private int id;
-	private String username;
+	private String user;
 	private String title;
 	private String message;
 	private Date date;
 	List<MediaFile> mediafiles = new ArrayList<MediaFile>();
 	List<Hashtag> hashtags = new ArrayList<Hashtag>();
 
-	public Post(int id, String username, String title, String message, Date date) {
+	public Post(int id, String user, String title, String message, Date date) {
 		this.id = id;
-		this.username = username;
+		this.user = user;
 		this.title = title;
 		this.message = message;
 		this.date = date;
@@ -29,12 +29,12 @@ public class Post {
 		this.id = id;
 	}
 
-	public String getUsername() {
-		return username;
+	public String getUser() {
+		return user;
 	}
 
-	public void setUsername(String username) {
-		this.username = username;
+	public void setUser(String user) {
+		this.user = user;
 	}
 
 	public String getMessage() {

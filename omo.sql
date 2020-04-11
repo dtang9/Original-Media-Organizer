@@ -2,7 +2,7 @@ drop table if exists posts;
 
 create table posts (
     id integer auto_increment primary key,
-    username varchar(255),
+    user varchar(255),
     title varchar(1000),
     message varchar(2000),
     date timestamp
@@ -24,13 +24,13 @@ create table hashtags (
     word varchar(300)
   );
 
-insert into posts (username, title, message, date)
+insert into posts (user, title, message, date)
     values ('Bob', 'How are croissants made?', 'Today, I found a very nice video on how croissants are made.', '2020-01-23 17:10:00');
-insert into posts (username, title, message, date)
+insert into posts (user, title, message, date)
 	values ('John', 'Image of a tree', 'This is such a nice image of a tree.', '2020-02-08 12:10:00');
-insert into posts (username, title, message, date)
+insert into posts (user, title, message, date)
 	values ('Betty', 'Starwars song', 'This song is so good. It really brings back memories of the good old days.', '2020-03-20 13:30:00');
-insert into posts (username, title, message, date)
+insert into posts (user, title, message, date)
 	values ('Jane', 'Mountains', 'This image of a mountain is so relaxing and beautiful to view.', now());
 
 insert into mediafiles (post_id, name, media_file, url)

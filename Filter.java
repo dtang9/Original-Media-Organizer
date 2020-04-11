@@ -48,12 +48,12 @@ public class Filter extends HttpServlet {
 			if (text != null) {
 				List<Text> texts = new ArrayList<Text>();
 				// Get text of posts
-				sql = "select username, title, message from posts";
+				sql = "select user, title, message from posts";
 				pstmt = c.prepareStatement(sql);
 				ResultSet rs = pstmt.executeQuery();
 				while (rs.next()) {
 					// Store the text
-					texts.add(new Text(rs.getString("username"), rs.getString("title"), rs.getString("message")));
+					texts.add(new Text(rs.getString("user"), rs.getString("title"), rs.getString("message")));
 				}
 				c.close();
 				request.setAttribute("texts", texts);

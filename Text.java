@@ -1,22 +1,22 @@
 package omo;
 
 public class Text {
-	private String username;
+	private String user;
 	private String title;
 	private String message;
 	
-	public Text(String username, String title, String message) {
-		this.username = username;
+	public Text(String user, String title, String message) {
+		this.user = user;
 		this.title = title;
 		this.message = message;
 	}
 
-	public String getUsername() {
-		return username;
+	public String getUser() {
+		return user;
 	}
 
-	public void setUsername(String username) {
-		this.username = username;
+	public void setUsername(String user) {
+		this.user = user;
 	}
 
 	public String getTitle() {
