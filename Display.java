@@ -52,7 +52,7 @@ public class Display extends HttpServlet {
 			ResultSet rs = pstmt.executeQuery();
 			
 			while (rs.next()) {
-				Post post = new Post(Integer.parseInt(rs.getString("id")), rs.getString("username"), rs.getString("title"), rs.getString("message"), rs.getDate("date"));
+				Post post = new Post(Integer.parseInt(rs.getString("id")), rs.getString("user"), rs.getString("title"), rs.getString("message"), rs.getDate("date"));
 				String sql2 = "select * from mediafiles where post_id = " + post.getId();
 				PreparedStatement pstmt2 = c.prepareStatement(sql2);
 				ResultSet rs2 = pstmt2.executeQuery();

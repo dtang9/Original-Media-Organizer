@@ -27,7 +27,7 @@
                 <c:forEach items="${texts}" var="text">
                 <div class="card">
                     <div class="card-header">
-                        ${text.username}
+                        ${text.user}
                     </div>
                     <div class="card-body">
                         <h5 class="card-title">${text.title}</h5> 
