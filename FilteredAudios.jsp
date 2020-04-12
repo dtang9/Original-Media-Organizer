@@ -27,7 +27,7 @@
                 <c:forEach items="${audios}" var="audio">
                 <div class="card">
                     <div class="card-header">
-                        ${audio.media_file}
+                        Audio
                     </div>
                     <div class="card-body">
                         <h5 class="card-title">${audio.name}</h5> 

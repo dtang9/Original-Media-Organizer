@@ -44,7 +44,7 @@
                             ${hashtag.word} </c:forEach>                            
                     </div>
                     <div class="card-footer">
-                        <a href="DeletePost?${post.id}" class="btn btn-danger">Delete</a>
+                        <a href="DeletePost?id=${post.id}" class="btn btn-danger">Delete</a>
   					</div>
                 </div>
                 </c:forEach>

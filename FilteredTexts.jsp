@@ -25,15 +25,15 @@
             <div class="jumbotron">
                 <h2 class="text-center">Feed/Media</h2>
                 <c:forEach items="${texts}" var="text">
-                <div class="card">
-                    <div class="card-header">
-                        ${text.user}
+                    <div class="card">
+                        <div class="card-header">
+                            ${text.user}
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">${text.title}</h5>
+                            <p class="card-text">${text.message}</p>
+                        </div>
                     </div>
-                    <div class="card-body">
-                        <h5 class="card-title">${text.title}</h5> 
-                        <p class="card-text">${text.message}</p>
-                    </div>
-                </div>
                 </c:forEach>
             </div>
         </div>
@@ -49,4 +49,5 @@
         </div>
     </div>
 </body>
+
 </html>

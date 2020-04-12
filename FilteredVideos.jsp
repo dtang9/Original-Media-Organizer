@@ -25,16 +25,16 @@
             <div class="jumbotron">
                 <h2 class="text-center">Feed/Media</h2>
                 <c:forEach items="${videos}" var="video">
-                <div class="card">
-                    <div class="card-header">
-                        ${video.media_file}
+                    <div class="card">
+                        <div class="card-header">
+                            Video
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">${video.name}</h5>
+                            <p class="card-text"><a class="${video.name}" href="${video.url}">
+                                    ${video.url}</a></p>
+                        </div>
                     </div>
-                    <div class="card-body">
-                        <h5 class="card-title">${video.name}</h5> 
-                        <p class="card-text"><a class="${video.name}" href="${video.url}">
-                            ${video.url}</a></p>
-                    </div>
-                </div>
                 </c:forEach>
             </div>
         </div>
@@ -50,4 +50,5 @@
         </div>
     </div>
 </body>
+
 </html>
