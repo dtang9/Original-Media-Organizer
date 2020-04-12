@@ -34,9 +34,8 @@ public class Filter extends HttpServlet {
 			String url = "jdbc:mysql://cs3.calstatela.edu/cs3337stu01";
 			String username = "";
 			String password = "";
-			
 			c = DriverManager.getConnection(url, username, password);
-			// Get media files (image, video, or audio)
+			
 			String text = request.getParameter("text");
 			String image = request.getParameter("image");
 			String video = request.getParameter("video");
