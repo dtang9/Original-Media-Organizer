@@ -47,25 +47,28 @@ public class Display extends HttpServlet {
 			String password = "";
 			
 			c = DriverManager.getConnection(url, username, password);
+			// Get posts from database
 			String sql = "select * from posts";
 			PreparedStatement pstmt = c.prepareStatement(sql);
 			ResultSet rs = pstmt.executeQuery();
 			
 			while (rs.next()) {
+				// Create a post
 				Post post = new Post(Integer.parseInt(rs.getString("id")), rs.getString("user"), rs.getString("title"), rs.getString("message"), rs.getDate("date"));
+				// Get mediafiles of the post
 				String sql2 = "select * from mediafiles where post_id = " + post.getId();
 				PreparedStatement pstmt2 = c.prepareStatement(sql2);
 				ResultSet rs2 = pstmt2.executeQuery();
-				// Add mediafiles to post
+				// Add mediafiles to the post
 				while (rs2.next()) {
 					post.addMediafile(new MediaFile(Integer.parseInt(rs2.getString("post_id")), rs2.getString("name"),
 							rs2.getString("media_file"), rs2.getString("url")));
-					// posts.add(post);
 				}
+				// Get hashtags of the post
 				String sql3 = "select * from hashtags where post_id = " + post.getId();
 				PreparedStatement pstmt3 = c.prepareStatement(sql3);
 				ResultSet rs3 = pstmt3.executeQuery();
-				// Add hashtags to post
+				// Add hashtags to the post
 				while (rs3.next()) {
 					post.addHashtag(new Hashtag(Integer.parseInt(rs3.getString("post_id")), rs3.getString("word")));
 				}

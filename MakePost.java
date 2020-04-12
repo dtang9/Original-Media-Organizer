@@ -31,8 +31,7 @@ public class MakePost extends HttpServlet {
 			String url = "jdbc:mysql://cs3.calstatela.edu/cs3337stu01";
 			String username = "";
 			String password = "";
-			// Each post is automatically assigned an id. The media will have same post id.
-			// Allow user to put hashtag in form. Hashtag will have same post id.
+			// Add a post
 			String sql1 = "insert into posts (user, title, message, date) values (?, ?, ?, now())";
 			c = DriverManager.getConnection(url, username, password);
 			PreparedStatement pstmt1 = c.prepareStatement(sql1);
@@ -43,7 +42,6 @@ public class MakePost extends HttpServlet {
 			pstmt1.setString(2, title);
 			pstmt1.setString(3, message);
 			pstmt1.executeUpdate();
-			
 			//Get post id
 			String sql2 = "select id from posts where user = ? and title = ?";
 			PreparedStatement pstmt2 = c.prepareStatement(sql2);
@@ -54,13 +52,13 @@ public class MakePost extends HttpServlet {
 			while (rs.next()) {
 				post_id = rs.getString("id");
 			}
-			
+			// Add hashtag to the post
 			String sql3 = "insert into hashtags (post_id, word) values (?, ?)";
 			PreparedStatement pstmt3 = c.prepareStatement(sql3);
 			pstmt3.setString(1, post_id);
 			pstmt3.setString(2, request.getParameter("word"));
 			pstmt3.executeUpdate();
-			
+			// Add media file to the post
 			String sql4 = "insert into mediafiles (post_id, name, media_file, url) values (?, ?, ?, ?)";
 			PreparedStatement pstmt4 = c.prepareStatement(sql4);
 			pstmt4.setString(1, post_id);
