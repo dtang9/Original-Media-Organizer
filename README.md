@@ -5,12 +5,12 @@
 ## How to upload your code?
 Click on "Branch: master". Type the name of the branch you want to create (yourname-#) <br>
 Branch name example: david-1 <br>
-On your branch, click "Upload files". <br>
-Drop the files you want to upload (.java or .jsp or .css) <br>
+In the folder "src", are servlet .java files. Click "Upload files" to upload servlets .java files. <br>
+In the folder "WEB-INF", are .jsp files. Click "Upload files" to upload .jsp files. <br>
 Click Commit changes <br>
 
 ## Installation/Set up
-Download Java (JDK 10 or 11) <br>
+Download OpenJDK. <br>
 
 Download Tomcat Guide: https://csns.calstatela.edu/wiki/content/cysun/course_materials/eclipse <br>
 
@@ -23,8 +23,8 @@ Click next <br>
 Check Generate web.xml deployment descriptor <br>
 Click finish <br> <br>
 
-All servlet (.java) files should go into src <br>
-All (.jsp) files should go into WEB-INF <br>
+All servlet .java files should go into src <br>
+All .jsp files should go into WEB-INF <br>
 CSS files should go into WebContent <br>
 
 This is what the Eclipse directory should look similar to: <br>
