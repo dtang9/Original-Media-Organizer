@@ -79,10 +79,10 @@
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="audio" id="audiofilter"
-                            value="audio">
+                        <input class="form-check-input" type="radio" name="song" id="songfilter"
+                            value="song">
                         <label class="form-check-label" for="exampleRadios2">
-                            Audio
+                            song
                         </label>
                     </div>
                     <div class="form-check">

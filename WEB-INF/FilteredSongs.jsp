@@ -24,13 +24,15 @@
         <div class="col-8">
             <div class="jumbotron">
                 <h2 class="text-center">Feed/Media</h2>
-                <c:forEach items="${dates}" var="date">
+                <c:forEach items="${songs}" var="song">
                 <div class="card">
                     <div class="card-header">
-                        Date
+                        Songs
                     </div>
                     <div class="card-body">
-                    ${date}
+                        <h5 class="card-title">${song.name}</h5> 
+                        <p class="card-text"><a class="${song.name}" href="${song.url}">
+                            ${song.url}</a></p>
                     </div>
                 </div>
                 </c:forEach>
@@ -42,7 +44,7 @@
                     Media Filter
                 </div>
                 <div class="card-body">
-                    Date
+                    Song
                 </div>
             </div>
         </div>

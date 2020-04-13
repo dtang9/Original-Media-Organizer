@@ -49,7 +49,7 @@
                         <select name="mediafile" class="form-control">
                             <option value="image">Image</option>
                             <option value="video">Video</option>
-                            <option value="audio">Audio</option>
+                            <option value="song">Song</option>
                         </select>
                     </div>
                     <div class="form-group">
