@@ -82,7 +82,7 @@
                         <input class="form-check-input" type="radio" name="song" id="songfilter"
                             value="song">
                         <label class="form-check-label" for="exampleRadios2">
-                            song
+                            Song
                         </label>
                     </div>
                     <div class="form-check">
