@@ -35,11 +35,10 @@ public class Filter extends HttpServlet {
 			String username = "";
 			String password = "";
 			c = DriverManager.getConnection(url, username, password);
-			
 			String text = request.getParameter("text");
 			String image = request.getParameter("image");
 			String video = request.getParameter("video");
-			String audio = request.getParameter("audio");
+			String song = request.getParameter("song");
 			String hashtag = request.getParameter("hashtag");
 			String date = request.getParameter("date");
 			
@@ -93,22 +92,22 @@ public class Filter extends HttpServlet {
 				// Redirect user to the filtered videos page
 				request.getRequestDispatcher("/WEB-INF/FilteredVideos.jsp").forward(request, response);
 			}
-			// Audio filter
-			else if (audio != null) {
-				List<MediaFile> audios = new ArrayList<MediaFile>();
+			// Song filter
+			else if (song != null) {
+				List<MediaFile> songs = new ArrayList<MediaFile>();
 				String sql = "select * from mediafiles where media_file = ?";
 				PreparedStatement pstmt = c.prepareStatement(sql);
-				pstmt.setString(1, audio);
+				pstmt.setString(1, song);
 				// Get media with specified file
 				ResultSet rs = pstmt.executeQuery();
 				while (rs.next()) {
 					// Store the media file
-					audios.add(new MediaFile(Integer.parseInt(rs.getString("post_id")), rs.getString("name"), rs.getString("media_file"), rs.getString("url")));
+					songs.add(new MediaFile(Integer.parseInt(rs.getString("post_id")), rs.getString("name"), rs.getString("media_file"), rs.getString("url")));
 				}
 				c.close();
-				request.setAttribute("audios", audios);
-				// Redirect user to the filtered audios page
-				request.getRequestDispatcher("/WEB-INF/FilteredAudios.jsp").forward(request, response);
+				request.setAttribute("songs", songs);
+				// Redirect user to the filtered songs page
+				request.getRequestDispatcher("/WEB-INF/FilteredSongs.jsp").forward(request, response);
 			}
 			// Hashtag filter
 			else if (hashtag != null) {
