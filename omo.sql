@@ -38,7 +38,7 @@ insert into mediafiles (post_id, name, media_file, url)
 insert into mediafiles (post_id, name, media_file, url)
 	values (2, 'tree', 'image', 'https://upload.wikimedia.org/wikipedia/commons/e/eb/Ash_Tree_-_geograph.org.uk_-_590710.jpg');
 insert into mediafiles (post_id, name, media_file, url)
-	values (3, 'starwars', 'audio', 'https://www.youtube.com/watch?v=_D0ZQPqeJkk');
+	values (3, 'starwars', 'song', 'https://www.youtube.com/watch?v=_D0ZQPqeJkk');
 insert into mediafiles (post_id, name, media_file, url)
 	values (4, 'mountain', 'image', 'https://images.pexels.com/photos/618833/pexels-photo-618833.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
 
