@@ -39,4 +39,5 @@ This is what the Eclipse directory should look similar to: <br>
 ![AudioFilter](https://github.com/dtang9/Original-Media-Organizer/blob/master/Progress/song%20filter.png) <br>
 ![HashtagFilter](https://github.com/dtang9/Original-Media-Organizer/blob/master/Progress/hashtag%20filter.png) <br>
 ![DateFilter](https://github.com/dtang9/Original-Media-Organizer/blob/master/Progress/date%20filter.png) <br>
-![MakePost](https://github.com/dtang9/Original-Media-Organizer/blob/master/Progress/Post.png)<br>
+![MakePost](https://github.com/dtang9/Original-Media-Organizer/blob/master/Progress/create%20post.png)<br>
+![EditPost](https://github.com/dtang9/Original-Media-Organizer/blob/master/Progress/edit%20post.png)<br>
