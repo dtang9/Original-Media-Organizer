@@ -18,12 +18,12 @@
     <div class="row justify-content-md-center">
         <div class="col">
             <ul class="list-group">
-                <a href="Display" class="list-group-item list-group-item-action">Home</a>
+                <a href="Display" class="list-group-item list-group-item-action">Home Page</a>
             </ul>
         </div>
         <div class="col-8">
             <div class="jumbotron">
-                <h2 class="text-center">Feed/Media</h2>
+                <h2 class="text-center">Images</h2>
                 <c:forEach items="${images}" var="image">
                     <div class="card">
                         <div class="card-header">

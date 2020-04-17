@@ -16,7 +16,7 @@
     <div class="row justify-content-md-center">
         <div class="col">
             <ul class="list-group">
-                <a href="Display" class="list-group-item list-group-item-action">Home</a>
+                <a href="Display" class="list-group-item list-group-item-action">Home Page</a>
             </ul>
         </div>
         <div class="col-10">
@@ -24,7 +24,7 @@
                 <h2 class="text-center">Post</h2>
                 <form action="MakePost" method="post">
                     <div class="form-group">
-                        <label for="user">User's name</label>
+                        <label for="user">Username</label>
                         <input type="text" class="form-control" name="user">
                     </div>
                     <div class="form-group">
@@ -39,9 +39,9 @@
                         <label for="message">Hashtag</label>
                         <input type="text" class="form-control" name="word" placeholder="#word">
                     </div>
-                    <h3 class="text-center">Create/Upload Media</h3>
+                    <h3 class="text-center">Media</h3>
                     <div class="form-group">
-                        <label for="name">Name of media</label>
+                        <label for="name">Media Name</label>
                         <input type="text" class="form-control" name="medianame">
                     </div>
                     <div class="form-group">
