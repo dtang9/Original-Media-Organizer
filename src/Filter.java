@@ -35,15 +35,10 @@ public class Filter extends HttpServlet {
 			String username = "";
 			String password = "";
 			c = DriverManager.getConnection(url, username, password);
-			String text = request.getParameter("text");
-			String image = request.getParameter("image");
-			String video = request.getParameter("video");
-			String song = request.getParameter("song");
-			String hashtag = request.getParameter("hashtag");
-			String date = request.getParameter("date");
+			String filter = request.getParameter("filter");
 			
 			// Text filter
-			if (text != null) {
+			if (filter.equals("text")) {
 				List<Text> texts = new ArrayList<Text>();
 				// Get text of posts
 				String sql = "select user, title, message from posts";
@@ -59,11 +54,11 @@ public class Filter extends HttpServlet {
 				request.getRequestDispatcher("/WEB-INF/FilteredTexts.jsp").forward(request, response);
 			}
 			// Image filter
-			else if (image != null) {
+			else if (filter.equals("image")) {
 				List<MediaFile> images = new ArrayList<MediaFile>();
 				String sql = "select * from mediafiles where media_file = ?";
 				PreparedStatement pstmt = c.prepareStatement(sql);
-				pstmt.setString(1, image);
+				pstmt.setString(1, filter);
 				// Get media with specified file
 				ResultSet rs = pstmt.executeQuery();
 				while (rs.next()) {
@@ -76,11 +71,11 @@ public class Filter extends HttpServlet {
 				request.getRequestDispatcher("/WEB-INF/FilteredImages.jsp").forward(request, response);
 			}
 			// Video filter
-			else if (video != null) {
+			else if (filter.equals("video")) {
 				List<MediaFile> videos = new ArrayList<MediaFile>();
 				String sql = "select * from mediafiles where media_file = ?";
 				PreparedStatement pstmt = c.prepareStatement(sql);
-				pstmt.setString(1, video);
+				pstmt.setString(1, filter);
 				// Get media with specified file
 				ResultSet rs = pstmt.executeQuery();
 				while (rs.next()) {
@@ -93,11 +88,11 @@ public class Filter extends HttpServlet {
 				request.getRequestDispatcher("/WEB-INF/FilteredVideos.jsp").forward(request, response);
 			}
 			// Song filter
-			else if (song != null) {
+			else if (filter.equals("song")) {
 				List<MediaFile> songs = new ArrayList<MediaFile>();
 				String sql = "select * from mediafiles where media_file = ?";
 				PreparedStatement pstmt = c.prepareStatement(sql);
-				pstmt.setString(1, song);
+				pstmt.setString(1, filter);
 				// Get media with specified file
 				ResultSet rs = pstmt.executeQuery();
 				while (rs.next()) {
@@ -110,7 +105,7 @@ public class Filter extends HttpServlet {
 				request.getRequestDispatcher("/WEB-INF/FilteredSongs.jsp").forward(request, response);
 			}
 			// Hashtag filter
-			else if (hashtag != null) {
+			else if (filter.equals("hashtag")) {
 				List<Hashtag> hashtags = new ArrayList<Hashtag>();
 				String sql = "select * from hashtags";
 				PreparedStatement pstmt = c.prepareStatement(sql);
@@ -124,7 +119,7 @@ public class Filter extends HttpServlet {
 				request.getRequestDispatcher("/WEB-INF/FilteredHashtags.jsp").forward(request, response);
 			}
 			// Date filter
-			if (date != null) {
+			if (filter.equals("date")) {
 				List<String> dates = new ArrayList<String>();
 				// Get dates of posts
 				String sql = "select date from posts";
