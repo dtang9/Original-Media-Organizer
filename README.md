@@ -1,6 +1,6 @@
 # Original-Media-Organizer
 
-## Project on CS3 server: http://cs3.calstatela.edu:8080/cs3337stu01/Display
+## Project on CS3 server: http://cs3.calstatela.edu:8080/cs3337stu01/DisplayModule
 
 ## How to upload your code?
 Click on "Branch: master". Type the name of the branch you want to create (yourname-#) <br>
