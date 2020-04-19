@@ -110,5 +110,4 @@ public class EditModule extends HttpServlet {
 		}
 		response.sendRedirect("DisplayModule");
 	}
-
 }

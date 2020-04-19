@@ -74,5 +74,4 @@ public class PostModule extends HttpServlet {
 		}
 		response.sendRedirect("DisplayModule");
 	}
-
 }

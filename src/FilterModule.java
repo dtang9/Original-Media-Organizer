@@ -140,5 +140,4 @@ public class FilterModule extends HttpServlet {
 			throw new ServletException(e);
 		}
 	}
-
 }
