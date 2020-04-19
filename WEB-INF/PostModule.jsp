@@ -16,13 +16,13 @@
     <div class="row justify-content-md-center">
         <div class="col">
             <ul class="list-group">
-                <a href="Display" class="list-group-item list-group-item-action">Home Page</a>
+                <a href="DisplayModule" class="list-group-item list-group-item-action">Home Page</a>
             </ul>
         </div>
         <div class="col-10">
             <div class="jumbotron">
                 <h2 class="text-center">Post</h2>
-                <form action="MakePost" method="post">
+                <form action="PostModule" method="post">
                     <div class="form-group">
                         <label for="user">Username</label>
                         <input type="text" class="form-control" name="user">
