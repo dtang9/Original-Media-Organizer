@@ -23,8 +23,8 @@ public class DeleteModule extends HttpServlet {
 		Connection c = null;
 		try {
 			String url = "jdbc:mysql://cs3.calstatela.edu/cs3337stu01";
-			String username = "cs3337stu01";
-			String password = "!DBgrBWB";
+			String username = "";
+			String password = "";
 			
 			c = DriverManager.getConnection(url, username, password);
 			// Delete post by id

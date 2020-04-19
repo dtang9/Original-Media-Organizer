@@ -28,8 +28,8 @@ public class EditModule extends HttpServlet {
 		Connection c = null;
 		try {
 			String url = "jdbc:mysql://cs3.calstatela.edu/cs3337stu01";
-			String username = "cs3337stu01";
-			String password = "!DBgrBWB";
+			String username = "";
+			String password = "";
 			
 			c = DriverManager.getConnection(url, username, password);
 			// Get post from database
@@ -73,8 +73,8 @@ public class EditModule extends HttpServlet {
 		Connection c = null;
 		try {
 			String url = "jdbc:mysql://cs3.calstatela.edu/cs3337stu01";
-			String username = "cs3337stu01";
-			String password = "!DBgrBWB";
+			String username = "";
+			String password = "";
 			// Update post
 			String sql1 = "update posts set user = ?, title = ?, message = ? where id = ?";
 			c = DriverManager.getConnection(url, username, password);
