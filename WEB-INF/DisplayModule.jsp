@@ -18,8 +18,8 @@
     <div class="row justify-content-md-center">
         <div class="col">
             <ul class="list-group">
-                <a href="Display" class="list-group-item list-group-item-action">Home Page</a>
-                <a href="MakePost" class="list-group-item list-group-item-action">Create Post</a>
+                <a href="DisplayModule" class="list-group-item list-group-item-action">Home Page</a>
+                <a href="PostModule" class="list-group-item list-group-item-action">Create Post</a>
             </ul>
         </div>
         <div class="col-8">
@@ -46,12 +46,12 @@
                             <div class="container">
                                 <div class="row">
                                     <div class="col-sm">
-                                        <a href="EditPost?id=${post.id}" class="btn btn-secondary">Edit</a>
+                                        <a href="EditModule?id=${post.id}" class="btn btn-secondary">Edit</a>
                                     </div>
                                     <div class="col-sm">
                                     </div>
                                     <div class="col-sm">
-                                        <a href="DeletePost?id=${post.id}" class="btn btn-danger">Delete</a>
+                                        <a href="DeleteModule?id=${post.id}" class="btn btn-danger">Delete</a>
                                     </div>
                                 </div>
                             </div>
@@ -65,7 +65,7 @@
                 <div class="card-header">
                     Media Filters
                 </div>
-                <form action="Filter" method="post">
+                <form action="FilterModule" method="post">
                     <div class="card-body">
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="filter" id="textfilter" value="text">

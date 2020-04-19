@@ -18,7 +18,7 @@
     <div class="row justify-content-md-center">
         <div class="col">
             <ul class="list-group">
-                <a href="Display" class="list-group-item list-group-item-action">Home Page</a>
+                <a href="DisplayModule" class="list-group-item list-group-item-action">Home Page</a>
             </ul>
         </div>
         <div class="col-8">
