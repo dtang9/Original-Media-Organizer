@@ -15,11 +15,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/Filter")
-public class Filter extends HttpServlet {
+@WebServlet("/FilterModule")
+public class FilterModule extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-    public Filter() {
+    public FilterModule() {
         super();
     }
 
@@ -32,8 +32,8 @@ public class Filter extends HttpServlet {
 		Connection c = null;
 		try {
 			String url = "jdbc:mysql://cs3.calstatela.edu/cs3337stu01";
-			String username = "";
-			String password = "";
+			String username = "cs3337stu01";
+			String password = "!DBgrBWB";
 			c = DriverManager.getConnection(url, username, password);
 			String filter = request.getParameter("filter");
 			
@@ -51,7 +51,7 @@ public class Filter extends HttpServlet {
 				c.close();
 				request.setAttribute("texts", texts);
 				// Redirect user to the filtered texts page
-				request.getRequestDispatcher("/WEB-INF/FilteredTexts.jsp").forward(request, response);
+				request.getRequestDispatcher("/WEB-INF/DisplayModule(Texts).jsp").forward(request, response);
 			}
 			// Image filter
 			else if (filter.equals("image")) {
@@ -68,7 +68,7 @@ public class Filter extends HttpServlet {
 				c.close();
 				request.setAttribute("images", images);
 				// Redirect user to the filtered images page
-				request.getRequestDispatcher("/WEB-INF/FilteredImages.jsp").forward(request, response);
+				request.getRequestDispatcher("/WEB-INF/DisplayModule(Images).jsp").forward(request, response);
 			}
 			// Video filter
 			else if (filter.equals("video")) {
@@ -85,7 +85,7 @@ public class Filter extends HttpServlet {
 				c.close();
 				request.setAttribute("videos", videos);
 				// Redirect user to the filtered videos page
-				request.getRequestDispatcher("/WEB-INF/FilteredVideos.jsp").forward(request, response);
+				request.getRequestDispatcher("/WEB-INF/DisplayModule(Videos).jsp").forward(request, response);
 			}
 			// Song filter
 			else if (filter.equals("song")) {
@@ -102,7 +102,7 @@ public class Filter extends HttpServlet {
 				c.close();
 				request.setAttribute("songs", songs);
 				// Redirect user to the filtered songs page
-				request.getRequestDispatcher("/WEB-INF/FilteredSongs.jsp").forward(request, response);
+				request.getRequestDispatcher("/WEB-INF/DisplayModule(Songs).jsp").forward(request, response);
 			}
 			// Hashtag filter
 			else if (filter.equals("hashtag")) {
@@ -116,7 +116,7 @@ public class Filter extends HttpServlet {
 				c.close();
 				request.setAttribute("hashtags", hashtags);
 				// Redirect user to the filtered hashtags page
-				request.getRequestDispatcher("/WEB-INF/FilteredHashtags.jsp").forward(request, response);
+				request.getRequestDispatcher("/WEB-INF/DisplayModule(Hashtags).jsp").forward(request, response);
 			}
 			// Date filter
 			if (filter.equals("date")) {
@@ -132,7 +132,7 @@ public class Filter extends HttpServlet {
 				c.close();
 				request.setAttribute("dates", dates);
 				// Redirect user to the filtered dates page
-				request.getRequestDispatcher("/WEB-INF/FilteredDates.jsp").forward(request, response);
+				request.getRequestDispatcher("/WEB-INF/DisplayModule(Dates).jsp").forward(request, response);
 			}
 			c.close();
 		}

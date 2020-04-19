@@ -15,11 +15,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/EditPost")
-public class EditPost extends HttpServlet {
+@WebServlet("/EditModule")
+public class EditModule extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-    public EditPost() {
+    public EditModule() {
         super();
     }
 
@@ -28,8 +28,8 @@ public class EditPost extends HttpServlet {
 		Connection c = null;
 		try {
 			String url = "jdbc:mysql://cs3.calstatela.edu/cs3337stu01";
-			String username = "";
-			String password = "";
+			String username = "cs3337stu01";
+			String password = "!DBgrBWB";
 			
 			c = DriverManager.getConnection(url, username, password);
 			// Get post from database
@@ -66,15 +66,15 @@ public class EditPost extends HttpServlet {
 		}
 		request.setAttribute("post", post);
 		// Send post
-		request.getRequestDispatcher("/WEB-INF/EditPost.jsp").forward(request, response);
+		request.getRequestDispatcher("/WEB-INF/EditModule.jsp").forward(request, response);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		Connection c = null;
 		try {
 			String url = "jdbc:mysql://cs3.calstatela.edu/cs3337stu01";
-			String username = "";
-			String password = "";
+			String username = "cs3337stu01";
+			String password = "!DBgrBWB";
 			// Update post
 			String sql1 = "update posts set user = ?, title = ?, message = ? where id = ?";
 			c = DriverManager.getConnection(url, username, password);
@@ -108,7 +108,7 @@ public class EditPost extends HttpServlet {
 		catch (SQLException e) {
 			throw new ServletException(e);
 		}
-		response.sendRedirect("Display");
+		response.sendRedirect("DisplayModule");
 	}
 
 }

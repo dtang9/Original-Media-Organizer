@@ -11,11 +11,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/DeletePost")
-public class DeletePost extends HttpServlet {
+@WebServlet("/DeleteModule")
+public class DeleteModule extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-    public DeletePost() {
+    public DeleteModule() {
         super();
     }
 
@@ -23,8 +23,8 @@ public class DeletePost extends HttpServlet {
 		Connection c = null;
 		try {
 			String url = "jdbc:mysql://cs3.calstatela.edu/cs3337stu01";
-			String username = "";
-			String password = "";
+			String username = "cs3337stu01";
+			String password = "!DBgrBWB";
 			
 			c = DriverManager.getConnection(url, username, password);
 			// Delete post by id
@@ -48,7 +48,7 @@ public class DeletePost extends HttpServlet {
 		catch (SQLException e) {
 			throw new ServletException(e);
 		}
-		response.sendRedirect("Display");
+		response.sendRedirect("DisplayModule");
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

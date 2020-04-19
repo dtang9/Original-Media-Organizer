@@ -16,11 +16,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/Display")
-public class Display extends HttpServlet {
+@WebServlet("/DisplayModule")
+public class DisplayModule extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-    public Display() {
+    public DisplayModule() {
         super();
     }
     
@@ -43,8 +43,8 @@ public class Display extends HttpServlet {
 		Connection c = null;
 		try {
 			String url = "jdbc:mysql://cs3.calstatela.edu/cs3337stu01";
-			String username = "";
-			String password = "";
+			String username = "cs3337stu01";
+			String password = "!DBgrBWB";
 			
 			c = DriverManager.getConnection(url, username, password);
 			// Get posts from database
@@ -80,7 +80,7 @@ public class Display extends HttpServlet {
 			throw new ServletException(e);
 		}
 		request.setAttribute("posts", posts);
-		request.getRequestDispatcher("/WEB-INF/Display.jsp").forward(request, response);
+		request.getRequestDispatcher("/WEB-INF/DisplayModule.jsp").forward(request, response);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

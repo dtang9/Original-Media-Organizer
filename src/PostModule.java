@@ -13,24 +13,24 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/MakePost")
-public class MakePost extends HttpServlet {
+@WebServlet("/PostModule")
+public class PostModule extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-    public MakePost() {
+    public PostModule() {
         super();
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.getRequestDispatcher("/WEB-INF/MakePost.jsp").forward(request, response);
+		request.getRequestDispatcher("/WEB-INF/PostModule.jsp").forward(request, response);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		Connection c = null;
 		try {
 			String url = "jdbc:mysql://cs3.calstatela.edu/cs3337stu01";
-			String username = "";
-			String password = "";
+			String username = "cs3337stu01";
+			String password = "!DBgrBWB";
 			// Add a post
 			String sql1 = "insert into posts (user, title, message, date) values (?, ?, ?, now())";
 			c = DriverManager.getConnection(url, username, password);
@@ -72,7 +72,7 @@ public class MakePost extends HttpServlet {
 		catch (SQLException e) {
 			throw new ServletException(e);
 		}
-		response.sendRedirect("Display");
+		response.sendRedirect("DisplayModule");
 	}
 
 }
