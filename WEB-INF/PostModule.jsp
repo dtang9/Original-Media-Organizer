@@ -19,7 +19,7 @@
                 <a href="DisplayModule" class="list-group-item list-group-item-action">Home Page</a>
             </ul>
         </div>
-        <div class="col-10">
+        <div class="col-8">
             <div class="jumbotron">
                 <h2 class="text-center">Post</h2>
                 <form action="PostModule" method="post">
@@ -59,6 +59,8 @@
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
             </div>
+        </div>
+        <div class="col">
         </div>
 
     </div>
